@@ -1,12 +1,11 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
+import { decrementByOne } from '../../../store/actions-creators'
 
 export const DecrementCounter = () => {
     const dispatch = useDispatch()
     const handleClickDecrement = () => {
-        dispatch({
-            type: "decrement"
-        })
+        dispatch(decrementByOne)
     }
 
     return (
