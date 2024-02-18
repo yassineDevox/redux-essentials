@@ -1,0 +1,2 @@
+export { getCounterByOneSelector } from "./counter";
+
