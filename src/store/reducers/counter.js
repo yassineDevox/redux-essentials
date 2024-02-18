@@ -1,21 +1,26 @@
+import { combineReducers } from "redux"
+import { ActionTypeCounter } from "../constants/actions-types"
+
 const intialState = {
-    value: 0
+    byOne: { value: 0 },
 }
 
-const counterReducer = (state = intialState, action) => {
+const counterByOne = (state = intialState.byOne, action) => {
     switch (action.type) {
-        case "increment": {
+        case ActionTypeCounter.BY_ONE.INCREMENT: {
             return {
                 value: state.value + 1
             }
         }
-        case "decrement": {
+        case ActionTypeCounter.BY_ONE.DECREMENT: {
             return {
                 value: state.value - 1
             }
         }
-        default: return state 
+        default: return state
     }
 }
 
-export default counterReducer
+export default combineReducers({
+    counterByOne
+})
