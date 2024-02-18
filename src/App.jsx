@@ -16,6 +16,7 @@ const App = () => {
       <IncrementCounter />
       <br />
       <DecrementCounter />
+      <br />
     </div>
   )
 }

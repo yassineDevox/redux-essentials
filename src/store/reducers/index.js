@@ -1,9 +1,7 @@
 import { combineReducers } from "redux";
-import StoreTypes from "../constants/storetypes";
+import StoreTypes from "../constants/store-types";
 import counter from "./counter";
 
-const f = combineReducers({
+export default combineReducers({
     [StoreTypes.COUNTER]: counter
 })
-
-export default f
