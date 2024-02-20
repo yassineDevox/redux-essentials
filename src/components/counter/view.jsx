@@ -1,15 +1,14 @@
 import PropTypes from 'prop-types';
 
-const View = ({ counterValueSelect, api, isPending }) => {
+const View = ({ counterValueSelect, isPending }) => {
 
     return <div style={{ fontSize: "40px" }}>
-        {isPending ? <>natwi mak ...</> : api?.data?.value}
+        {isPending ? <>loading ...</> : counterValueSelect}
     </div>
 }
 
 View.propTypes = {
     counterValueSelect: PropTypes.number.isRequired,
-    api: PropTypes.object.isRequired,
     isPending: PropTypes.bool.isRequired
 }
 

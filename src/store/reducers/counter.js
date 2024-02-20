@@ -17,6 +17,11 @@ const counterByOne = (state = intialState.byOne, action) => {
                 value: state.value - 1
             }
         }
+        case ActionTypeCounter.BY_ONE.GET: {
+            return {
+                value: action.payload
+            }
+        }
         default: return state
     }
 }

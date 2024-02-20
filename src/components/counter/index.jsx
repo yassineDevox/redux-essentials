@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { getCounterByOneSelector } from '../../store/selectors'
 
 import View from './view'
 import { counterApi } from '../../utils/apis/counter'
+import { intialize } from '../../store/actions-creators/counter'
 
 export const Counter = () => {
 
     const counterValueSelect = useSelector(getCounterByOneSelector)
+    const dispatch = useDispatch()
     const [api, setApi] = useState({})
     const [isPending, setPending] = useState(false)
 
@@ -17,8 +19,8 @@ export const Counter = () => {
             try {
                 setPending(true)
                 const r = await counterApi.getValue()
-                // console.log("res: ",r) 
-                setApi(r)
+                // add the res to the store counter   
+                dispatch(intialize(r.data.value))
             } catch (error) {
                 console.log(error)
             } finally {
