@@ -10,7 +10,6 @@ export const Counter = () => {
 
     const counterValueSelect = useSelector(getCounterByOneSelector)
     const dispatch = useDispatch()
-    const [api, setApi] = useState({})
     const [isPending, setPending] = useState(false)
 
     useEffect(() => {
@@ -31,6 +30,6 @@ export const Counter = () => {
     }, [])
 
     return (
-        <View {...{ counterValueSelect, isPending, api }} />
+        <View {...{ counterValueSelect, isPending }} />
     )
 }
