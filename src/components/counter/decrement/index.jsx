@@ -5,7 +5,7 @@ import { decrementByOne } from '../../../store/actions-creators'
 export const DecrementCounter = () => {
     const dispatch = useDispatch()
     const handleClickDecrement = () => {
-        dispatch(decrementByOne)
+        dispatch(decrementByOne())
     }
 
     return (

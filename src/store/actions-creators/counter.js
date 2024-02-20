@@ -1,8 +1,10 @@
+import { ActionTypeCounter } from "../constants/actions-types"
+
 export const incrementByOne = _ => ({
-    type: "increment"
+    type: ActionTypeCounter.BY_ONE.INCREMENT
 })
 
 
 export const decrementByOne = _ => ({
-    type: "decrement"
+    type: ActionTypeCounter.BY_ONE.DECREMENT
 })

@@ -22,5 +22,5 @@ const counterByOne = (state = intialState.byOne, action) => {
 }
 
 export default combineReducers({
-    counterByOne
+    byOne:counterByOne
 })

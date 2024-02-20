@@ -1,6 +1,6 @@
-export const ActionTypeCounter = {
+ export const ActionTypeCounter = {
     BY_ONE: {
-        INCREMENT: "byOne.increment",
-        DECREMENT: "byOne.decrement"
+        INCREMENT: "counter.byOne.increment",
+        DECREMENT: "counter.byOne.decrement"
     },
 }

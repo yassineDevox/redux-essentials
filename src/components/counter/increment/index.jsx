@@ -6,7 +6,7 @@ import { incrementByOne } from '../../../store/actions-creators'
 export const IncrementCounter = () => {
     const dispatch = useDispatch()
     const handleClickIncrement = () => {
-        dispatch(incrementByOne)
+        dispatch(incrementByOne())
     }
     return (
         <div>
