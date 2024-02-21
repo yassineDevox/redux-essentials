@@ -1,11 +1,12 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { incrementByOne } from '../slice'
+import PropTypes from 'prop-types'
 
-const Increment = ({styles}) => {
-    
-    const dispatch  = useDispatch()
-    const handleIncrement = ()=> dispatch(incrementByOne())
+const Increment = ({ styles }) => {
+
+    const dispatch = useDispatch()
+    const handleIncrement = () => dispatch(incrementByOne())
 
     return (
         <button
@@ -18,4 +19,7 @@ const Increment = ({styles}) => {
     )
 }
 
+Increment.propsTypes = {
+    styles: PropTypes.object.isRequired
+}
 export default Increment

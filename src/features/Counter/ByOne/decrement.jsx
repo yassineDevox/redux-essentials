@@ -16,4 +16,8 @@ const Decrement = ({ styles }) => {
     )
 }
 
+Decrement.propsTypes = {
+    styles: PropTypes.object.isRequired
+}
+
 export default Decrement
