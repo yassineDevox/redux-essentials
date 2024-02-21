@@ -1,24 +1,20 @@
-import React from "react";
-import {
-  Counter,
-  DecrementCounter,
-  IncrementCounter
-} from "./components";
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import { Counter } from './features/Counter';
 
-
-const App = () => {
+function App() {
   return (
-    <div style={{ margin: "0 auto", width: "20vw", border: "1px solid",
-    textAlign:"center"}}>
-      <h1>Counter APP v1</h1>
-      <Counter />
-      <br />
-      <IncrementCounter />
-      <br />
-      <DecrementCounter />
-      <br />
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <Counter />
+        <p>
+          Counter App with RTQ.
+        </p>
+      </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
