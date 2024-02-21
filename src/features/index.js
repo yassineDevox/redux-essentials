@@ -1,3 +1,2 @@
-export { CounterByAmount } from "./Counter/ByAmount";
-export { CounterByOne } from "./Counter/ByOne";
+export { Counter } from "./Counter";
 
