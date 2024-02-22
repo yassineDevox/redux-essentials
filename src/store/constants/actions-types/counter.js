@@ -1,7 +1,14 @@
  export const ActionTypeCounter = {
     BY_ONE: {
         INCREMENT: "counter.byOne.increment",
-        GET: "counter.byOne.GET",
-        DECREMENT: "counter.byOne.decrement"
+        SET: "counter.byOne.set",
+        DECREMENT:"counter.byOne.decrement",
+        API:{
+            GET:{
+                START:"counter.byOne.api.get.start",
+                FAIL:"counter.byOne.api.get.fail",
+                SUCCESS:"counter.byOne.api.get.success"
+            }
+        }
     },
 }

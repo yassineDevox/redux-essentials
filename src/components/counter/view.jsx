@@ -1,15 +1,16 @@
 import PropTypes from 'prop-types';
 
-const View = ({ counterValueSelect, isPending }) => {
+const View = ({ counterSelect }) => {
 
+    const { loading, error, value } = counterSelect
+    if (error) return <>Error ... </>
     return <div style={{ fontSize: "40px" }}>
-        {isPending ? <>loading ...</> : counterValueSelect}
+        {loading ? <>loading ...</> : value}
     </div>
 }
 
 View.propTypes = {
-    counterValueSelect: PropTypes.number.isRequired,
-    isPending: PropTypes.bool.isRequired
+    counterSelect: PropTypes.object.isRequired,
 }
 
 export default View
