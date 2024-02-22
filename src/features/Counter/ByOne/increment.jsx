@@ -19,7 +19,8 @@ const Increment = ({ styles }) => {
     )
 }
 
-Increment.propsTypes = {
+Increment.propTypes = {
     styles: PropTypes.object.isRequired
 }
+
 export default Increment
