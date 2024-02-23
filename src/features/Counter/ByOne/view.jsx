@@ -4,11 +4,14 @@ import Decrement from './decrement';
 import styles from '../style.module.css';
 import PropTypes from 'prop-types';
 
-const View = ({ counterValueSelect }) => {
+const View = ({ counterSelect }) => {
+    const { loading, error, value } = counterSelect
+    if (error) return <p>{JSON.stringify(error)}</p>
+    if (loading) return <p>loading ...</p>
     return (
         <div className={styles.row}>
             <Increment {...{ styles }} />
-            <span className={styles.value}>{counterValueSelect}</span>
+            <span className={styles.value}>{value}</span>
             <Decrement {...{ styles }} />
         </div>
     )
@@ -16,7 +19,7 @@ const View = ({ counterValueSelect }) => {
 
 
 View.propTypes = {
-    counterValueSelect: PropTypes.bool.isRequired
+    counterSelect: PropTypes.object.isRequired
 }
 
 export default View

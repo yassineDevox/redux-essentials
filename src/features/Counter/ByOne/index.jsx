@@ -4,9 +4,9 @@ import { useSelector } from 'react-redux';
 import { getCounterValueSelector } from '../slice';
 
 export function CounterByOne() {
-  const counterValueSelect = useSelector(getCounterValueSelector)
+  const counterSelect = useSelector(getCounterValueSelector)
 
   return (
-    <View {...{counterValueSelect}}/>
+    <View {...{counterSelect}}/>
   );
 }
