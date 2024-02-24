@@ -8,9 +8,9 @@ import { intialize } from '../../store/actions-creators/counter'
 
 export const Counter = () => {
 
-    const counterValueSelect = useSelector(getCounterByOneSelector)
     const dispatch = useDispatch()
     const [isPending, setPending] = useState(false)
+    const [error, setError] = useState(null)
 
     useEffect(() => {
 
@@ -21,7 +21,7 @@ export const Counter = () => {
                 // add the res to the store counter   
                 dispatch(intialize(r.data.value))
             } catch (error) {
-                console.log(error)
+                setError(error)
             } finally {
                 setPending(false)
             }
@@ -29,7 +29,9 @@ export const Counter = () => {
         f()
     }, [])
 
+    const counterValueSelect = useSelector(getCounterByOneSelector)
+
     return (
-        <View {...{ counterValueSelect, isPending }} />
+        <View {...{ counterValueSelect, isPending, error }} />
     )
 }
