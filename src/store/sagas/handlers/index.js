@@ -11,6 +11,6 @@ export function* handleGetCounter(action) {
         const value = get(data,'value',0)
         yield put(getCounterApiSuccess(value))
     } catch (err) {
-        put(getCounterApiFail(err))
+        yield put(getCounterApiFail(err))
     }
 }

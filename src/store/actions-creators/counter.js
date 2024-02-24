@@ -8,15 +8,16 @@ export const decrementByOne = _ => ({
     type: ActionTypeCounter.BY_ONE.DECREMENT
 })
 
-export const getCounterApiStart = _=>({
-    type:ActionTypeCounter.BY_ONE.API.GET.START
+export const getCounterApiStart = _ => ({
+    type: ActionTypeCounter.BY_ONE.API.GET.START
 })
 
-export const getCounterApiSuccess = payload =>({
-    type:ActionTypeCounter.BY_ONE.API.GET.SUCCESS,
-    payload
+export const getCounterApiSuccess = value => ({
+    type: ActionTypeCounter.BY_ONE.API.GET.SUCCESS,
+    payload: value
 })
 
-export const getCounterApiFail = _=>({
-    type:ActionTypeCounter.BY_ONE.API.GET.FAIL
+export const getCounterApiFail = err => ({
+    type: ActionTypeCounter.BY_ONE.API.GET.FAIL,
+    payload: err
 })

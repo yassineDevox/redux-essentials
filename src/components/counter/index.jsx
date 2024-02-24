@@ -14,7 +14,6 @@ export const Counter = () => {
     }, [dispatch])
 
     const counterSelect = useSelector(getCounterByOneSelector)
-    console.log(counterSelect)
     return (
         <View {...{ counterSelect }} />
     )
