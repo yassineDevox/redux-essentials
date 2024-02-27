@@ -23,12 +23,6 @@ const counterByOne = (state = intialState.byOne, action) => {
                 value: state.value - 1
             }
         }
-        case ActionTypeCounter.BY_ONE.SET: {
-            return {
-                ...state,
-                value: action.payload
-            }
-        }
         case ActionTypeCounter.BY_ONE.API.GET.START: {
             return {
                 ...state,
