@@ -23,20 +23,20 @@ const counterByOne = (state = intialState.byOne, action) => {
                 value: state.value - 1
             }
         }
-        case ActionTypeCounter.BY_ONE.API.GET.START: {
+        case ActionTypeCounter.BY_ONE.GET.START: {
             return {
                 ...state,
                 loading: true
             }
         }
-        case ActionTypeCounter.BY_ONE.API.GET.FAIL: {
+        case ActionTypeCounter.BY_ONE.GET.FAIL: {
             return {
                 ...state,
                 loading: false,
                 error: action.payload
             }
         }
-        case ActionTypeCounter.BY_ONE.API.GET.SUCCESS: {
+        case ActionTypeCounter.BY_ONE.GET.SUCCESS: {
             return {
                 loading: false,
                 error:null,

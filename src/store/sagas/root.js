@@ -4,7 +4,7 @@ import { handleGetCounter } from "./handlers"
 
 export function* watcherSaga() {
     yield takeLatest(
-        ActionTypeCounter.BY_ONE.API.GET.START,
+        ActionTypeCounter.BY_ONE.GET.START,
         handleGetCounter
     )
 }
