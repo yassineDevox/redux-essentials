@@ -1,1 +1,1 @@
-export { default as actionTypesTodo } from "./todo";
+export { default as ActionTypesTodo } from "./todo";
