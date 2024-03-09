@@ -1,15 +1,11 @@
 import React from "react";
-import {
-  Counter,
-  DecrementCounter,
-  IncrementCounter
-} from "./components";
+import { Todos } from "./components/Todos";
 
 
 const App = () => {
   return (
     <div>
-     APP
+     <Todos/>
     </div>
   )
 }

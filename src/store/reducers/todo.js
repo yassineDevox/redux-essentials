@@ -11,7 +11,7 @@ const initialState = {
     }
 }
 
-const get = (state = initialState, action) => {
+const get = (state = initialState.get, action) => {
     switch (action.type) {
         case ActionTypesTodo.GET.START: {
             const query = {
@@ -47,8 +47,7 @@ const get = (state = initialState, action) => {
             }
         }
 
-        default: state
-            break;
+        default: return state
     }
 }
 
