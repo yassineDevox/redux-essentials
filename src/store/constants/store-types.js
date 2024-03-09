@@ -1,4 +1,4 @@
 const StoreTypes = {
-    COUNTER:"counter"
+    TODO:'todo'
 }
 export default StoreTypes
