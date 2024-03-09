@@ -1,4 +1,5 @@
-import { ActionTypeCounter } from "../constants/actions-types"
+import api from "../../utils/api/counter"
+import { ActionTypeCommon, ActionTypeCounter } from "../constants/actions-types"
 
 export const incrementByOne = _ => ({
     type: ActionTypeCounter.BY_ONE.INCREMENT
@@ -8,16 +9,11 @@ export const decrementByOne = _ => ({
     type: ActionTypeCounter.BY_ONE.DECREMENT
 })
 
-export const getCounterApiStart = _ => ({
-    type: ActionTypeCounter.BY_ONE.GET.START
-})
-
-export const getCounterApiSuccess = value => ({
-    type: ActionTypeCounter.BY_ONE.GET.SUCCESS,
-    payload: value
-})
-
-export const getCounterApiFail = err => ({
-    type: ActionTypeCounter.BY_ONE.GET.FAIL,
-    payload: err
+//--- API 
+export const getCounterApiRequest = (payload, succesCallback, errorCallback) => ({
+    type: ActionTypeCommon.COMMON_API_CALL,
+    subType: ActionTypeCounter.BY_ONE.GET.START,
+    promise: api.getCounterValue(payload),
+    succesCallback,
+    errorCallback
 })
