@@ -1,15 +1,15 @@
 import { ActionTypesTodo } from "../constants/actions-types";
 
-const getAllTodosRequest = _ => ({
+export const getAllTodosRequest = _ => ({
     type: ActionTypesTodo.GET.START
 })
 
-const getAllTodosFail = err => ({
+export const getAllTodosFail = err => ({
     type: ActionTypesTodo.GET.FAIL,
     payload: err
 })
 
-const getAllTodosSuccess = data => ({
+export const getAllTodosSuccess = data => ({
     type: ActionTypesTodo.GET.SUCCESS,
     payload: data
 })
