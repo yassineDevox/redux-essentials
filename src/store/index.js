@@ -1,10 +1,10 @@
 import { createStore, applyMiddleware } from "redux"
-import rootReducer from "./reducers"
 import { composeWithDevTools } from "redux-devtools-extension"
-import createSagaMiddlewate from "redux-saga"
 import { watcherSaga } from "./sagas/root"
 import { createBrowserHistory } from 'history'
 import { routerMiddleware } from "connected-react-router"
+import createSagaMiddlewate from "redux-saga"
+import reducers from "./reducers"
 
 export const history = createBrowserHistory()
 
@@ -16,7 +16,7 @@ const middlewares = [historyMiddleware, sagaMiddleware]
 const composeEnhancers = composeWithDevTools({});
 
 const store = createStore(
-    rootReducer,
+    reducers(history),
     composeEnhancers(applyMiddleware(...middlewares))
 )
 

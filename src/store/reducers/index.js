@@ -3,11 +3,12 @@ import StoreTypes from "../constants/store-types";
 import todoReducer from "./todo";
 import userReducer from "./user";
 import { connectRouter } from "connected-react-router";
-import { history } from "..";
 
-
-export default combineReducers({
+const appReducers = history => combineReducers({
     [StoreTypes.TODO]: todoReducer,
     [StoreTypes.USER]: userReducer,
     [StoreTypes.ROUTER]: connectRouter(history)
 })
+
+export default appReducers
+
