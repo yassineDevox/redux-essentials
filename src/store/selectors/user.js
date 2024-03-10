@@ -1,0 +1,1 @@
+export const getAllUsersSelector = state => state.user.get

@@ -1,5 +1,5 @@
 import { call, put } from "redux-saga/effects";
-import { getAllTodosRequest } from "../requests/todo";
+import { getAllTodosRequest } from "../requests";
 import { get } from "lodash";
 import { getAllTodosFail, getAllTodosSuccess } from "../../actions-creators/todo";
 

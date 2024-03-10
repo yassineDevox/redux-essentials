@@ -1,8 +1,11 @@
 import { takeLatest } from "redux-saga/effects"
-import { ActionTypesTodo } from "../constants/actions-types"
-import { getAllTodosHandler } from "./handlers/todo"
+import { ActionTypesTodo, ActionTypesUser } from "../constants/actions-types"
+import { getAllTodosHandler, getAllUsersHandler } from "./handlers"
+
+
 export function* watcherSaga() {
     yield takeLatest(
-        ActionTypesTodo.GET.START, getAllTodosHandler
+        ActionTypesTodo.GET.START, getAllTodosHandler,
+        ActionTypesUser.GET.START, getAllUsersHandler,
     )
 }
