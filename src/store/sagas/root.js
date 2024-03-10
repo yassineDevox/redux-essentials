@@ -4,8 +4,6 @@ import { getAllTodosHandler, getAllUsersHandler } from "./handlers"
 
 
 export function* watcherSaga() {
-    yield takeLatest(
-        ActionTypesTodo.GET.START, getAllTodosHandler,
-        ActionTypesUser.GET.START, getAllUsersHandler,
-    )
+    yield takeLatest(ActionTypesTodo.GET.START, getAllTodosHandler)
+    yield takeLatest(ActionTypesUser.GET.START, getAllUsersHandler)
 }
