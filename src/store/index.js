@@ -3,18 +3,23 @@ import rootReducer from "./reducers"
 import { composeWithDevTools } from "redux-devtools-extension"
 import createSagaMiddlewate from "redux-saga"
 import { watcherSaga } from "./sagas/root"
+import { createBrowserHistory } from 'history'
+import { routerMiddleware } from "connected-react-router"
 
-// create the saga middleware
+export const history = createBrowserHistory()
+
+const historyMiddleware = routerMiddleware(history)
 const sagaMiddleware = createSagaMiddlewate()
 
+const middlewares = [historyMiddleware, sagaMiddleware]
+
 const composeEnhancers = composeWithDevTools({});
-//mount saga middleware to the store 
+
 const store = createStore(
     rootReducer,
-    composeEnhancers(applyMiddleware(sagaMiddleware))
+    composeEnhancers(applyMiddleware(...middlewares))
 )
 
-// run the sagas
 sagaMiddleware.run(watcherSaga)
 
 export default store 
