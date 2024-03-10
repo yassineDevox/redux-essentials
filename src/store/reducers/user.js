@@ -25,6 +25,7 @@ const get = (state = initialState.get, action) => {
         }
 
         case ActionTypesUser.GET.FAIL: {
+            console.log('action=>', action)
             const query = {
                 error: action.payload,
                 loading: false
