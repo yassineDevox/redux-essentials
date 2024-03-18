@@ -1,0 +1,99 @@
+{
+    "hello":{
+        "msg":"Hello Yassine 😇"
+    },
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "save": "Save",
+    "confirm": "Confirm",
+    "error": {
+        "title": "Error",
+        "invalid": "Invalid",
+        "emptyField": "Can't be blank",
+        "required": "Required input",
+        "invalidEmail": "Invalid E-mail",
+        "fillField": "Please fill out this field",
+        "min": "The minimum number of characters is {{ min }}",
+        "somethingWentwrong": "Something went wrong, please try again"
+    },
+    "loading": "Loading...",
+    "search": "Search",
+    "actions": {
+        "title": "Actions",
+        "show": "Show",
+        "edit": "Edit",
+        "delete": "Delete",
+        "enable": "Enable",
+        "disable": "Disable",
+        "makePublic": "Make public",
+        "makePrivate": "Make private",
+        "clear": "Clear",
+        "cancel": "Cancel",
+        "sign": "Sign",
+        "validate": "Validate",
+        "charge": "Charge",
+        "discharge": "Discharge",
+        "history": "History",
+        "block": "Block",
+        "unblock": "Unblock",
+        "opposition": "Opposition on the card",
+        "add": "Add",
+        "finish": "Finish",
+        "continue": "Continue",
+        "next": "Next",
+        "previous": "Previous",
+        "addDocument": "Add Document",
+        "editDocument": "Edit Document",
+        "update": "Update",
+        "c2cTransfer": "Transfer funds to a card",
+        "settings": "Settings",
+        "noThanks": "Skip",
+        "skip": "Skip",
+        "confirm": "Confirm",
+        "ok": "Ok",
+        "activate": "Activate",
+        "deactivate": "Deactivate",
+        "ban": "Ban",
+        "see": "Show",
+        "select": "Select",
+        "download": "Download"
+    },
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "confirmed": "Confirmed",
+    "wip": "Work In progress",
+    "itemsPerPage": "Items per page",
+    "exportAsCsv": "Export csv file",
+    "exportAsXls": "Export xls file",
+    "exportAsPdf": "Export pdf file",
+    "or": "or",
+    "selectAll": "Select All",
+    "select": "Select",
+    "date": "Date",
+    "from": "From",
+    "to": "To",
+    "valid": "Valid",
+    "invalid": "Invalid",
+    "goBack": "go back",
+    "upload": "Upload",
+    "back": "Back",
+    "validate": "Validate",
+    "required": "is required !",
+    "validationMessages": {
+        "invalid": "Is invalid"
+    },
+    "permissions": {
+        "notAuthorized": "You're not authorized to process this action"
+    },
+    "messages": {
+        "required": "Please fill out this field."
+    },
+    "dynamicForm": {
+        "error": {
+            "minChar": "Please enter at least {{min}} characters",
+            "maxChar": "Please enter no more than {{max}} characters",
+            "required": "{{name}} is required",
+            "regex": "Please enter a valid {{name}}"
+        }
+    }
+}

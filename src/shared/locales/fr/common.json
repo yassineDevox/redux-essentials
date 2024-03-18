@@ -1,0 +1,100 @@
+{
+    "hello":{
+        "msg":"Bonjour Yassine 😇"
+    },
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "save": "Enregistrer",
+    "confirm": "Confirmer",
+    "error": {
+      "title": "Erreur",
+      "invalid": "Invalid",
+      "emptyField": "Doit être rempli",
+      "required": "Champ obligatoire",
+      "invalidEmail": "E-mail non valide",
+      "fillField": "Veuillez remplir ce champ",
+      "min": "Le nombre minimum de caractères est {{ min }}",
+      "somethingWentwrong": "Une erreur s'est produite. Veuillez réessayer"
+    },
+    "loading": "Chargement...",
+    "search": "Rechercher",
+    "actions": {
+      "title": "Actions",
+      "show": "Afficher",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "enable": "Activer",
+      "disable": "Désactiver",
+      "makePublic": "Rendre public",
+      "makePrivate": "Rendre privé",
+      "clear": "Effacer",
+      "cancel": "Annuler",
+      "sign": "Signer",
+      "validate": "Valider",
+      "charge": "Charger",
+      "discharge": "Décharger",
+      "history": "Historique",
+      "block": "Bloquer",
+      "unblock": "Débloquer",
+      "opposition": "Opposition sur la carte",
+      "add": "Ajouter",
+      "finish": "Terminer",
+      "continue": "Continuer",
+      "next": "Suivant",
+      "previous": "Précédent",
+      "addDocument": "Ajouter",
+      "editDocument": "Modifier",
+      "update": "Modifier",
+      "c2cTransfer": "Transfert vers une carte",
+      "confirm": "Confirmer",
+      "settings": "Paramètres",
+      "ok": "Ok",
+      "noThanks": "Non, Merci",
+      "skip": "Suivant",
+      "activate": "Activer",
+      "deactivate": "Désactiver",
+      "ban": "Interdire",
+      "see": "Voir",
+      "select": "Sélectionner",
+      "download": "Télécharger"
+    },
+    "enabled": "Activé",
+    "disabled": "Désactivé",
+    "confirmed": "Confirmé",
+    "wip": "En cours de développement",
+    "itemsPerPage": "Nombre de lignes par page",
+    "exportAsCsv": "Exporter en csv",
+    "exportAsXls": "Exporter en xls",
+    "exportAsPdf": "Exporter en pdf",
+    "or": "ou",
+    "selectAll": "Sélectionner tout",
+    "select": "Chosir",
+    "date": "Date",
+    "from": "Source",
+    "to": "Destination",
+    "valid": "Valide",
+    "invalid": "Invalide",
+    "goBack": "Retour",
+    "upload": "Importer",
+    "back": "Retour",
+    "validate": "Valider",
+    "required": "est requis !",
+    "validationMessages": {
+      "invalid": "n'est pas valide"
+    },
+    "permissions": {
+      "notAuthorized": "Vous n'êtes pas autorisé à initialiser cette action"
+    },
+    "messages": {
+      "required": "Veuillez renseigner ce champ."
+    },
+    "dynamicForm": {
+      "error": {
+        "minChar": "Veuillez saisir au moins {{min}} caractères",
+        "maxChar": "Veuillez saisir au plus {{max}} caractères",
+        "required": "{{name}} est obligatoire",
+        "regex": "Veuillez saisir un(e) {{name}} valide"
+      }
+    }
+  }
+  

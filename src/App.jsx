@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { useTranslation } from 'react-i18next'
+
+const Hello = ({ t }) => {
+
+  return (
+    <div>{t("hello.msg")}</div>
+  )
+}
 
 const App = () => {
-  const [counter, setcounter] = useState(0)
+  const { t, i18n } = useTranslation()
+  const onChangeLanguage = lng => i18n.changeLanguage(lng)
 
-  useEffect(() => {
-    let interval;
-    if (counter < 10)
-      interval = setInterval(() => {
-        console.log('counter:', counter);
-        setcounter(counter + 1);
-      }, 1000)
-    
-    return () => {
-      console.log('cleanup=>', interval)
-      clearInterval(interval)
-    }
-  }, [counter])
   return (
-    <div style={{ textAlign: 'cener' }}>{counter}</div>
+    <div>
+      <button onClick={() => onChangeLanguage('fr')}>FR</button><br />
+      <button onClick={() => onChangeLanguage('en')}>EN</button><br />
+      <Hello {...{ t }} />
+    </div>
   )
 }
 

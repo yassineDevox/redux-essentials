@@ -4,7 +4,7 @@ import App from './App'
 import { Provider } from 'react-redux'
 import store, { history } from './store/'
 import { ConnectedRouter } from 'connected-react-router'
-
+import './shared/locales/i18n'
 
 
 ReactDOM.createRoot(document.getElementById('root'))
