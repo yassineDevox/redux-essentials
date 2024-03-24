@@ -15,6 +15,7 @@ function* handleApiCall(action) {
         yield put(successAction())
 
     } catch (error) {
+        console.log(error)
         const failAction = () => ({ type: subType.FAIL, payload: error })
         yield put(failAction())
     }

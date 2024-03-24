@@ -1,7 +1,8 @@
 const StoreTypes = {
-    TODO:'todo',
-    USER:'user',
-    GREETING:'greeting',
-    ROUTER:'router',
+    TODO: 'todo',
+    USER: 'user',
+    GREETING: 'greeting',
+    AUTH: 'auth',
+    ROUTER: 'router',
 }
 export default StoreTypes

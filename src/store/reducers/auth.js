@@ -1,9 +1,8 @@
 import { combineReducers } from "redux";
-import { ActionTypesGreeting } from "../constants/actions-types";
-
+import { ActionTypesAuth } from "../constants/actions-types";
 
 const initialState = {
-    get: {
+    login: {
         idle: true,//state machine
         data: {},
         error: null,
@@ -11,9 +10,9 @@ const initialState = {
     }
 }
 
-const get = (state = initialState.get, action) => {
+const login = (state = initialState.login, action) => {
     switch (action.type) {
-        case ActionTypesGreeting.GET.START: {
+        case ActionTypesAuth.LOGIN.START: {
             const query = {
                 idle: false,
                 loading: true
@@ -24,7 +23,7 @@ const get = (state = initialState.get, action) => {
             }
         }
 
-        case ActionTypesGreeting.GET.FAIL: {
+        case ActionTypesAuth.LOGIN.FAIL: {
             const query = {
                 error: action.payload,
                 loading: false
@@ -35,7 +34,7 @@ const get = (state = initialState.get, action) => {
             }
         }
 
-        case ActionTypesGreeting.GET.SUCCESS: {
+        case ActionTypesAuth.LOGIN.SUCCESS: {
             const query = {
                 data: action.payload,
                 error: null,
@@ -53,5 +52,5 @@ const get = (state = initialState.get, action) => {
 
 
 export default combineReducers({
-    get
+    login
 })

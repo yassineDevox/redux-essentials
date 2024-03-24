@@ -6,5 +6,11 @@ const myAxios = axios.create({
 });
 
 export const Api = {
-    get: (endpoint) => myAxios.request({ url: endpoint, method: 'GET'}),
+    get: (endpoint) => myAxios.request({ url: endpoint, method: 'GET' }),
+    post: (endpoint, data, headers) => myAxios.request({
+        url: endpoint,
+        method: 'POST',
+        data,
+        headers
+    }),
 }
