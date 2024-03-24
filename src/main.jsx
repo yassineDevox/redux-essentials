@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import store, { history } from './store/'
 import { ConnectedRouter } from 'connected-react-router'
 import './shared/locales/i18n'
+import InternalizationProvider from './shared/context/internalization'
 
 
 ReactDOM.createRoot(document.getElementById('root'))
@@ -12,7 +13,9 @@ ReactDOM.createRoot(document.getElementById('root'))
     <React.StrictMode>
       <Provider store={store}>
         <ConnectedRouter history={history}>
-          <App />
+          <InternalizationProvider>
+            <App />
+          </InternalizationProvider>
         </ConnectedRouter>
       </Provider>
     </React.StrictMode >,

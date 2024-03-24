@@ -1,5 +1,5 @@
-import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { useInternalization } from './shared/hooks'
 
 const Hello = ({ t }) => {
 
@@ -9,13 +9,14 @@ const Hello = ({ t }) => {
 }
 
 const App = () => {
-  const { t, i18n } = useTranslation()
-  const onChangeLanguage = lng => i18n.changeLanguage(lng)
 
+  const { t } = useTranslation()
+  const { changeLanguage } = useInternalization()
+  
   return (
     <div>
-      <button onClick={() => onChangeLanguage('fr')}>FR</button><br />
-      <button onClick={() => onChangeLanguage('en')}>EN</button><br />
+      <button onClick={() => changeLanguage('fr')}>FR</button><br />
+      <button onClick={() => changeLanguage('en')}>EN</button><br />
       <Hello {...{ t }} />
     </div>
   )
