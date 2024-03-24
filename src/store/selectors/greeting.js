@@ -1,0 +1,1 @@
+export const greetingSelector = state => state.greeting.get

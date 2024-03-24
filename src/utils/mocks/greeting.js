@@ -1,15 +1,14 @@
+const DATA = {data:{
+    label:{
+        fr:'Salut',
+        en:'Hi'
+    }
+}}
 const ApiMock = {
-    gretting: () => {
+    greeting: () => {
         return new Promise((resolve) => {
             setTimeout(() => {
-                resolve({
-                    data:{
-                        label:{
-                            fr:'Salut',
-                            en:'Hi'
-                        }
-                    }
-                })
+                resolve(DATA)
             }, 3000)
         })
     }

@@ -1,4 +1,4 @@
-import ApiMock from "../mocks/"
+import ApiMock from "../mocks/greeting"
 // import { Api } from "./fetcher"
 const { greeting } = ApiMock
 

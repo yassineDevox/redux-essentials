@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { InternalizationContext } from '../context/internalization'
 
 export const useInternalization = () => {

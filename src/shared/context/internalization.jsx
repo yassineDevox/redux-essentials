@@ -9,7 +9,7 @@ const InternalizationProvider = ({ children }) => {
 
    const changeLanguage = lng => {
       localStorage.setItem('profil_lang', lng);
-      ctx.i18n.changeLanguage(lng)
+      i18n.changeLanguage(lng)
    }
 
    const getCurrentLanguage = () => i18n.language
