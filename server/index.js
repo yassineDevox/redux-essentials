@@ -14,8 +14,10 @@ app.use(express.json());
 
 // Dummy database
 const users = [{
-    email:'yassin@gmail.com',
-    password:'$2a$10$RJ3ch/IRrb8goSGlcC8Br.VjA/qHH1uKpmt/NYKIYHOZp2CejpkI6'//pass123
+    email: 'yassin@gmail.com',
+    password: '$2a$10$RJ3ch/IRrb8goSGlcC8Br.VjA/qHH1uKpmt/NYKIYHOZp2CejpkI6',//pass123,
+    firstname: 'Yassine',
+    lastname: 'RASSY'
 }];
 
 function authenticateToken(req, res, next) {
@@ -38,6 +40,7 @@ app.post('/register', async (req, res) => {
 });
 
 app.post('/login', async (req, res) => {
+
     const { email, password } = req.body;
     const user = users.find(u => u.email === email);
     if (!user || !(await bcrypt.compare(password, user.password))) {
@@ -46,11 +49,13 @@ app.post('/login', async (req, res) => {
 
     const token = jwt.sign(
         { userId: user.id },
-       'your_jwt_secret',
+        'your_jwt_secret',
         { expiresIn: '24h' }
     );
 
-    res.json({ token });
+    delete user.password
+    
+    return setTimeout(()=>res.json({ access_token: token, user }),3000)
 });
 
 // Apply authenticateToken middleware to all routes starting with /api/protected
@@ -66,6 +71,6 @@ app.get('/api/protected/settings', (req, res) => {
     res.json({ message: "User settings", user: req.user });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT} 😎`));

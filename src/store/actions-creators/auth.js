@@ -5,8 +5,14 @@ import {
 
 } from "../constants/actions-types";
 
-export const login = ({data}) => ({
+export const login = (
+    data,
+    successCallBack,
+    errorCallBack
+) => ({
     type: ActionTypesCommon.API_CALL,
-    subType:ActionTypesAuth.LOGIN,
-    api: () => ApiCall.login(data)
+    subType: ActionTypesAuth.LOGIN,
+    api: () => ApiCall.login(data),
+    successCallBack,
+    errorCallBack
 })

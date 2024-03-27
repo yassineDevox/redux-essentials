@@ -1,7 +1,7 @@
 import { Api } from "./fetcher"
 
 const ApiCall = {
-    login: (data) => Api.post('http://localhost:3000/login', data, {
+    login: (data) => Api.post('/login', data, {
         'Content-Type': 'application/json'
     })
 }

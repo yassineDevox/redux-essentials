@@ -1,5 +1,9 @@
 import common from './common.json'
+import login from './login.json'
+import home from './home.json'
 
 export const frTranslation = {
-    common
+    common,
+    login,
+    home
 }

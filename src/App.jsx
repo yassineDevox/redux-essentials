@@ -1,4 +1,3 @@
-// App.js
 import React from 'react';
 import {
   BrowserRouter as Router,
@@ -6,16 +5,23 @@ import {
   Route
 } from 'react-router-dom';
 
-import Login from './screen/login';
-// import Home from './screen/home';
+import Login from './screen/Login';
+import Home from './screen/Home';
+import Profile from './screen/Profile';
+import ProtectedRoute from './shared/components/ProtectedRoute';
+
+import './App.css'
 
 function App() {
   return (
     <Router>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          {/* <Route path="/" element={<Home />} /> */}
-        </Routes>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+        </Route>
+      </Routes>
     </Router>
   );
 }

@@ -6,6 +6,7 @@ import store, { history } from './store/'
 import { ConnectedRouter } from 'connected-react-router'
 import './shared/locales/i18n'
 import InternalizationProvider from './shared/context/internalization'
+import { AuthProvider } from './shared/context/authorization'
 
 
 ReactDOM.createRoot(document.getElementById('root'))
@@ -14,9 +15,11 @@ ReactDOM.createRoot(document.getElementById('root'))
       <Provider store={store}>
         <ConnectedRouter history={history}>
           <InternalizationProvider>
-            <App />
+            <AuthProvider>
+              <App />
+            </AuthProvider>
           </InternalizationProvider>
         </ConnectedRouter>
       </Provider>
-    </React.StrictMode >,
+    </React.StrictMode>,
   )
