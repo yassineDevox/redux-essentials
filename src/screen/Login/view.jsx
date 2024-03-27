@@ -1,8 +1,8 @@
-import React, { useRef } from "react"
+import React, { useEffect, useRef } from "react"
 import PropTypes from "prop-types";
 
 import './login.css'
-import { get } from "lodash";
+import { get, isEmpty } from "lodash";
 
 const View = ({ t, loading, handleSubmit }) => {
 
@@ -11,11 +11,16 @@ const View = ({ t, loading, handleSubmit }) => {
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
+
     const credentials = {
       email: get(emailRef, 'current.value'),
       password: get(passwordRef, 'current.value')
     }
-    handleSubmit(credentials)
+
+    if (isEmpty(credentials.email) || isEmpty(credentials.password))
+      alert('Fields shouldnt be empty 🚨')
+    else
+      handleSubmit(credentials)
   }
 
   return (
@@ -47,7 +52,6 @@ const View = ({ t, loading, handleSubmit }) => {
           style={{ marginLeft: '10px' }}
           ref={passwordRef}
         />
-
         <button
           type="submit"
           style={{

@@ -3,19 +3,19 @@ import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../store/actions-creators/auth';
 import { loginSelector } from '../../store/selectors/auth';
 import { useTranslation } from 'react-i18next';
+import { useAuth } from '../../shared/hooks/useAuth';
+import { get } from 'lodash';
+import { useNavigate } from 'react-router-dom'
 
 import './login.css'
 
 import View from './view';
-import { useAuth } from '../../shared/hooks/useAuth';
-import { get } from 'lodash';
-import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
 
   const { t } = useTranslation('login')
   const { setUser, setToken } = useAuth()
-  
+
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
@@ -27,11 +27,17 @@ const Login = () => {
     navigate('/', { replace: true })
   }
 
+  const onLoginFailure = (err) => {
+    const errorMessage = get(err, 'payload.response.data')
+    alert(`${errorMessage} 🚨`)
+  }
+
   const handleSubmit = ({ email, password }) => {
     dispatch(
       login(
         { email, password },
-        onLoginSuccess
+        onLoginSuccess,
+        onLoginFailure
       )
     )
   };
