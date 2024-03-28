@@ -2,10 +2,10 @@ import { Navigate, Outlet } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 
 const ProtectedRoute = () => {
-  const { user } = useAuth();
+  const { user: connectedUser } = useAuth();
 
   const handleRedirect = () => {
-    if (!user) {
+    if (!connectedUser) {
       return <Navigate to="/login" />;
     }
   };

@@ -8,9 +8,9 @@ export const AuthContext = React.createContext()
 
 export const AuthProvider = ({ children }) => {
 
-   const [userSession, setuserSession] = useState(JSON.parse(localStorage.getItem(USER)) || '')
+   const [userSession, setuserSession] = useState(JSON.parse(localStorage.getItem(USER)) || {})
    const [accessToken, setAccessToken] = useState(localStorage.getItem(ACCESS_TOKEN) || '')
-   
+
    useDebugValue(userSession)
    useDebugValue(accessToken)
 
@@ -31,7 +31,13 @@ export const AuthProvider = ({ children }) => {
       setAccessToken(null);
    }
 
-   const value = { user: userSession, accessToken, setUser, setToken, clearSession };
+   const value = {
+      user: userSession,
+      accessToken,
+      setUser,
+      setToken,
+      clearSession
+   };
 
    return (
       <AuthContext.Provider {...{ value }}>

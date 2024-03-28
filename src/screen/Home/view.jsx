@@ -7,7 +7,6 @@ import { get } from "lodash"
 import PropTypes from "prop-types"
 
 const Hello = ({ greeting }) => {
-
   return (
     <div>{greeting} Yassine 😇 !</div>
   )
